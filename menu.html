@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niki Café - Menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-amber-50">
+
+<header class="bg-amber-100 shadow fixed w-full top-0 left-0 z-50">
+  <div class="max-w-6xl mx-auto px-5 flex items-center justify-between h-16 relative">
+    <a href="index.html" class="text-xl font-bold text-amber-800">Niki Café</a>
+
+    <input type="checkbox" id="menu-toggle" class="peer hidden" />
+    <label for="menu-toggle" class="flex flex-col justify-center gap-1.5 cursor-pointer md:hidden">
+      <span class="block w-7 h-1 bg-amber-800"></span>
+      <span class="block w-7 h-1 bg-amber-800"></span>
+      <span class="block w-7 h-1 bg-amber-800"></span>
+    </label>
+
+    <nav class="fixed top-16 left-0 w-full bg-amber-100 shadow-md p-6 flex flex-col gap-6 opacity-0 pointer-events-none -translate-y-10 transition-all duration-300 ease-in-out peer-checked:opacity-100 peer-checked:pointer-events-auto peer-checked:translate-y-0 md:static md:flex md:flex-row md:items-center md:gap-10 md:w-auto md:p-0 md:shadow-none md:opacity-100 md:pointer-events-auto md:translate-y-0">
+      <a href="index.html" class="font-medium text-amber-800/60 hover:text-amber-900">Beranda</a>
+      <a href="tentang.html" class="font-medium text-amber-800/60 hover:text-amber-900">Tentang</a>
+      <a href="menu.html" class="font-medium text-amber-800 hover:text-amber-900">Menu</a>
+    </nav>
+  </div>
+</header>
+
+<section class="pt-20 max-w-6xl mx-auto px-5">
+  <h1 class="text-3xl font-bold text-amber-800 mb-8 text-center">Menu Minuman</h1>
+  <div id="menu-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+  </div>
+</section>
+
+<div id="modal" class="fixed inset-0 px-5 md:px-0 bg-black/50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+  <div class="bg-white rounded-lg max-w-md w-full p-6 relative">
+    <button id="modal-close" class="absolute top-2 right-2 text-amber-800 font-bold text-xl">X</button>
+    <img id="modal-img" class="w-48 h-48 object-cover rounded-full mx-auto mb-4" />
+    <h2 id="modal-title" class="text-2xl font-bold text-amber-800 mb-3 text-center"></h2>
+    <p id="modal-instructions" class="text-amber-900 text-sm text-center"></p>
+  </div>
+</div>
+
+<script src="js/menu.js"></script>
+
+</body>
+</html>
