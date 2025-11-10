@@ -6,11 +6,11 @@ openOffCanvasBtn.addEventListener('click', () => {
   overlay.className = 'fixed inset-0 bg-black bg-opacity-50 flex justify-end z-50';
 
   const offcanvas = document.createElement('div');
-  offcanvas.className = 'bg-amber-50 w-80 max-w-full h-full pt-16 px-4 shadow-lg transform translate-x-full transition-transform duration-300';
+  offcanvas.className = 'bg-amber-50 w-80 max-w-full h-full flex flex-col justify-between pt-16 pb-10 px-4 shadow-lg transform translate-x-full transition-transform duration-300';
   
   offcanvas.innerHTML = `
-    <div class="bg-amber-800">
-      <h2 class="text-xl font-bold mb-4">Identitas</h2>
+    <div class="bg-amber-800 text-amber-100 px-6 py-2 rounded ">
+      <h2 class="text-xl font-bold mb-4">Web ini dibuat oleh : </h2>
       <p class="mb-2"><strong>Nama:</strong> Ubay Lah</p>
       <p class="mb-4"><strong>NPM:</strong> 1234567890</p>
     </div>

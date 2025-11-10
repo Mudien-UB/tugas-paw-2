@@ -46,16 +46,16 @@ const createCardMenu = (drink) => `
   <div 
     data-id="${drink.idDrink}" 
     class="bg-amber-100 rounded-2xl overflow-hidden shadow-lg transition duration-300 cursor-pointer
-           flex flex-col items-center p-2 gap-2
+           flex flex-row items-center p-2 gap-2
            md:flex-col md:items-start md:p-4
            group relative"
   >
     <img 
       src="${drink.strDrinkThumb}" 
       alt="${drink.strDrink}" 
-      class="w-full aspect-square object-cover rounded-lg"
+      class="w-24 md:w-full aspect-square object-cover rounded-lg"
     />
-    <div class="flex-1 text-center md:text-left">
+    <div class="flex-1 text-left md:text-left">
       <h3 class="text-lg font-bold text-amber-900 mb-1">${drink.strDrink}</h3>
     </div>
     <span
@@ -66,8 +66,6 @@ const createCardMenu = (drink) => `
     </span>
   </div>
 `;
-
-
 
 const createCardFavMenu = (drink) => `
   <div data-id="${drink.idDrink}" class="flex-shrink-0 w-64 bg-amber-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg cursor-pointer transition duration-300 snap-start">
