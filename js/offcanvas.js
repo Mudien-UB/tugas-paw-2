@@ -1,13 +1,10 @@
-// Pilih tombol di footer
 const openOffCanvasBtn = document.querySelector('#footer button');
 
 openOffCanvasBtn.addEventListener('click', () => {
-  // Buat overlay
   const overlay = document.createElement('div');
   overlay.id = 'modalOverlay';
   overlay.className = 'fixed inset-0 bg-black bg-opacity-50 flex justify-end z-50';
 
-  // Buat offcanvas
   const offcanvas = document.createElement('div');
   offcanvas.className = 'bg-amber-50 w-80 max-w-full h-full pt-16 px-4 shadow-lg transform translate-x-full transition-transform duration-300';
   
@@ -21,21 +18,18 @@ openOffCanvasBtn.addEventListener('click', () => {
   `;
 
   overlay.appendChild(offcanvas);
-  document.body.appendChild(overlay); // Append ke body supaya overlay bisa menutupi semua
+  document.body.appendChild(overlay);
 
-  // Animasi masuk offcanvas
   setTimeout(() => {
     offcanvas.classList.remove('translate-x-full');
   }, 10);
 
-  // Event tutup
   const closeModalBtn = overlay.querySelector('#closeModal');
   closeModalBtn.addEventListener('click', () => {
     offcanvas.classList.add('translate-x-full');
     setTimeout(() => overlay.remove(), 300);
   });
 
-  // Klik di luar offcanvas
   overlay.addEventListener('click', (e) => {
     if (e.target === overlay) {
       offcanvas.classList.add('translate-x-full');
